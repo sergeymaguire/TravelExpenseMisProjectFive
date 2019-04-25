@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBoxAuto = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioBtnChevy = new System.Windows.Forms.RadioButton();
             this.radioBtnBuick = new System.Windows.Forms.RadioButton();
             this.groupBoxRoute = new System.Windows.Forms.GroupBox();
             this.radioBtnCity = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.btnCalc = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalCost = new System.Windows.Forms.Label();
+            this.radioBtnFreeway = new System.Windows.Forms.RadioButton();
             this.groupBoxAuto.SuspendLayout();
             this.groupBoxRoute.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             // groupBoxAuto
             // 
             this.groupBoxAuto.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBoxAuto.Controls.Add(this.radioButton2);
+            this.groupBoxAuto.Controls.Add(this.radioBtnChevy);
             this.groupBoxAuto.Controls.Add(this.radioBtnBuick);
             this.groupBoxAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAuto.Location = new System.Drawing.Point(31, 26);
@@ -61,20 +61,21 @@
             this.groupBoxAuto.TabStop = false;
             this.groupBoxAuto.Text = "AUTO";
             // 
-            // radioButton2
+            // radioBtnChevy
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(21, 63);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(107, 21);
-            this.radioButton2.TabIndex = 14;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioBtnChevy.AutoSize = true;
+            this.radioBtnChevy.Location = new System.Drawing.Point(21, 63);
+            this.radioBtnChevy.Name = "radioBtnChevy";
+            this.radioBtnChevy.Size = new System.Drawing.Size(65, 21);
+            this.radioBtnChevy.TabIndex = 14;
+            this.radioBtnChevy.TabStop = true;
+            this.radioBtnChevy.Text = "Chevy";
+            this.radioBtnChevy.UseVisualStyleBackColor = true;
             // 
             // radioBtnBuick
             // 
             this.radioBtnBuick.AutoSize = true;
+            this.radioBtnBuick.Checked = true;
             this.radioBtnBuick.Location = new System.Drawing.Point(21, 32);
             this.radioBtnBuick.Name = "radioBtnBuick";
             this.radioBtnBuick.Size = new System.Drawing.Size(60, 21);
@@ -86,8 +87,8 @@
             // groupBoxRoute
             // 
             this.groupBoxRoute.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.groupBoxRoute.Controls.Add(this.radioBtnFreeway);
             this.groupBoxRoute.Controls.Add(this.radioBtnCity);
-            this.groupBoxRoute.Controls.Add(this.radioButton4);
             this.groupBoxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRoute.Location = new System.Drawing.Point(31, 176);
             this.groupBoxRoute.Name = "groupBoxRoute";
@@ -99,7 +100,8 @@
             // radioBtnCity
             // 
             this.radioBtnCity.AutoSize = true;
-            this.radioBtnCity.Location = new System.Drawing.Point(21, 37);
+            this.radioBtnCity.Checked = true;
+            this.radioBtnCity.Location = new System.Drawing.Point(21, 79);
             this.radioBtnCity.Name = "radioBtnCity";
             this.radioBtnCity.Size = new System.Drawing.Size(49, 21);
             this.radioBtnCity.TabIndex = 15;
@@ -107,17 +109,6 @@
             this.radioBtnCity.Text = "City";
             this.radioBtnCity.UseVisualStyleBackColor = true;
             this.radioBtnCity.CheckedChanged += new System.EventHandler(this.radioBtnCity_CheckedChanged);
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(21, 82);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(107, 21);
-            this.radioButton4.TabIndex = 16;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // btnCalc
             // 
@@ -152,9 +143,9 @@
             this.lblMpg.AutoSize = true;
             this.lblMpg.Location = new System.Drawing.Point(372, 89);
             this.lblMpg.Name = "lblMpg";
-            this.lblMpg.Size = new System.Drawing.Size(52, 13);
+            this.lblMpg.Size = new System.Drawing.Size(28, 13);
             this.lblMpg.TabIndex = 6;
-            this.lblMpg.Text = "mpg label";
+            this.lblMpg.Text = "15.5";
             // 
             // label
             // 
@@ -170,9 +161,9 @@
             this.lblTotalMiles.AutoSize = true;
             this.lblTotalMiles.Location = new System.Drawing.Point(372, 136);
             this.lblTotalMiles.Name = "lblTotalMiles";
-            this.lblTotalMiles.Size = new System.Drawing.Size(65, 13);
+            this.lblTotalMiles.Size = new System.Drawing.Size(19, 13);
             this.lblTotalMiles.TabIndex = 8;
-            this.lblTotalMiles.Text = "lblTotalMiles";
+            this.lblTotalMiles.Text = "21";
             // 
             // textBoxGasPrice
             // 
@@ -207,6 +198,17 @@
             this.lblTotalCost.Size = new System.Drawing.Size(55, 13);
             this.lblTotalCost.TabIndex = 12;
             this.lblTotalCost.Text = "Total Cost";
+            // 
+            // radioBtnFreeway
+            // 
+            this.radioBtnFreeway.AutoSize = true;
+            this.radioBtnFreeway.Location = new System.Drawing.Point(21, 39);
+            this.radioBtnFreeway.Name = "radioBtnFreeway";
+            this.radioBtnFreeway.Size = new System.Drawing.Size(79, 21);
+            this.radioBtnFreeway.TabIndex = 16;
+            this.radioBtnFreeway.Text = "Freeway";
+            this.radioBtnFreeway.UseVisualStyleBackColor = true;
+            this.radioBtnFreeway.CheckedChanged += new System.EventHandler(this.radioBtnFreeway_CheckedChanged);
             // 
             // Form1
             // 
@@ -250,10 +252,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTotalCost;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioBtnChevy;
         private System.Windows.Forms.RadioButton radioBtnBuick;
         private System.Windows.Forms.RadioButton radioBtnCity;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioBtnFreeway;
     }
 }
 

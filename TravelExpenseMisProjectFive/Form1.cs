@@ -27,6 +27,25 @@ namespace TravelExpenseMisProjectFive
             if(radioBtnBuick.Checked)
             {
                 lblMpg.Text = "15.5";
+                lblTotalMiles.Text = "21";
+            }else 
+            {
+                lblMpg.Text = "19.3";
+                lblTotalMiles.Text = "21";
+            }
+        }
+
+        private void radioBtnFreeway_CheckedChanged(object sender, EventArgs e)
+        {
+            if(radioBtnBuick.Checked)
+            {
+                lblMpg.Text = "23.7";
+                lblTotalMiles.Text = "33";
+            }
+            else 
+            {
+                lblMpg.Text = "29.3";
+                lblTotalMiles.Text = "33";
             }
         }
     }

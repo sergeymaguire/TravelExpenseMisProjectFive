@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBoxBuick = new System.Windows.Forms.CheckBox();
             this.groupBoxAuto = new System.Windows.Forms.GroupBox();
-            this.checkBoxChevy = new System.Windows.Forms.CheckBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioBtnBuick = new System.Windows.Forms.RadioButton();
             this.groupBoxRoute = new System.Windows.Forms.GroupBox();
-            this.checkBoxCity = new System.Windows.Forms.CheckBox();
-            this.checkBoxFreeway = new System.Windows.Forms.CheckBox();
+            this.radioBtnCity = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.btnCalc = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lbl = new System.Windows.Forms.Label();
@@ -48,22 +48,11 @@
             this.groupBoxRoute.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBoxBuick
-            // 
-            this.checkBoxBuick.AutoSize = true;
-            this.checkBoxBuick.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBuick.Location = new System.Drawing.Point(6, 29);
-            this.checkBoxBuick.Name = "checkBoxBuick";
-            this.checkBoxBuick.Size = new System.Drawing.Size(89, 17);
-            this.checkBoxBuick.TabIndex = 0;
-            this.checkBoxBuick.Text = "Buick Electra";
-            this.checkBoxBuick.UseVisualStyleBackColor = true;
-            // 
             // groupBoxAuto
             // 
             this.groupBoxAuto.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBoxAuto.Controls.Add(this.checkBoxChevy);
-            this.groupBoxAuto.Controls.Add(this.checkBoxBuick);
+            this.groupBoxAuto.Controls.Add(this.radioButton2);
+            this.groupBoxAuto.Controls.Add(this.radioBtnBuick);
             this.groupBoxAuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxAuto.Location = new System.Drawing.Point(31, 26);
             this.groupBoxAuto.Name = "groupBoxAuto";
@@ -72,22 +61,33 @@
             this.groupBoxAuto.TabStop = false;
             this.groupBoxAuto.Text = "AUTO";
             // 
-            // checkBoxChevy
+            // radioButton2
             // 
-            this.checkBoxChevy.AutoSize = true;
-            this.checkBoxChevy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxChevy.Location = new System.Drawing.Point(6, 63);
-            this.checkBoxChevy.Name = "checkBoxChevy";
-            this.checkBoxChevy.Size = new System.Drawing.Size(93, 17);
-            this.checkBoxChevy.TabIndex = 1;
-            this.checkBoxChevy.Text = "Chevy Lumina";
-            this.checkBoxChevy.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(21, 63);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(107, 21);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnBuick
+            // 
+            this.radioBtnBuick.AutoSize = true;
+            this.radioBtnBuick.Location = new System.Drawing.Point(21, 32);
+            this.radioBtnBuick.Name = "radioBtnBuick";
+            this.radioBtnBuick.Size = new System.Drawing.Size(60, 21);
+            this.radioBtnBuick.TabIndex = 13;
+            this.radioBtnBuick.TabStop = true;
+            this.radioBtnBuick.Text = "Buick";
+            this.radioBtnBuick.UseVisualStyleBackColor = true;
             // 
             // groupBoxRoute
             // 
             this.groupBoxRoute.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBoxRoute.Controls.Add(this.checkBoxCity);
-            this.groupBoxRoute.Controls.Add(this.checkBoxFreeway);
+            this.groupBoxRoute.Controls.Add(this.radioBtnCity);
+            this.groupBoxRoute.Controls.Add(this.radioButton4);
             this.groupBoxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRoute.Location = new System.Drawing.Point(31, 176);
             this.groupBoxRoute.Name = "groupBoxRoute";
@@ -96,27 +96,28 @@
             this.groupBoxRoute.TabStop = false;
             this.groupBoxRoute.Text = "ROUTE";
             // 
-            // checkBoxCity
+            // radioBtnCity
             // 
-            this.checkBoxCity.AutoSize = true;
-            this.checkBoxCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxCity.Location = new System.Drawing.Point(6, 63);
-            this.checkBoxCity.Name = "checkBoxCity";
-            this.checkBoxCity.Size = new System.Drawing.Size(43, 17);
-            this.checkBoxCity.TabIndex = 1;
-            this.checkBoxCity.Text = "City";
-            this.checkBoxCity.UseVisualStyleBackColor = true;
+            this.radioBtnCity.AutoSize = true;
+            this.radioBtnCity.Location = new System.Drawing.Point(21, 37);
+            this.radioBtnCity.Name = "radioBtnCity";
+            this.radioBtnCity.Size = new System.Drawing.Size(49, 21);
+            this.radioBtnCity.TabIndex = 15;
+            this.radioBtnCity.TabStop = true;
+            this.radioBtnCity.Text = "City";
+            this.radioBtnCity.UseVisualStyleBackColor = true;
+            this.radioBtnCity.CheckedChanged += new System.EventHandler(this.radioBtnCity_CheckedChanged);
             // 
-            // checkBoxFreeway
+            // radioButton4
             // 
-            this.checkBoxFreeway.AutoSize = true;
-            this.checkBoxFreeway.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxFreeway.Location = new System.Drawing.Point(6, 29);
-            this.checkBoxFreeway.Name = "checkBoxFreeway";
-            this.checkBoxFreeway.Size = new System.Drawing.Size(66, 17);
-            this.checkBoxFreeway.TabIndex = 0;
-            this.checkBoxFreeway.Text = "Freeway";
-            this.checkBoxFreeway.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(21, 82);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(107, 21);
+            this.radioButton4.TabIndex = 16;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "radioButton4";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // btnCalc
             // 
@@ -135,6 +136,7 @@
             this.btnQuit.TabIndex = 4;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // lbl
             // 
@@ -236,13 +238,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox checkBoxBuick;
         private System.Windows.Forms.GroupBox groupBoxAuto;
-        private System.Windows.Forms.CheckBox checkBoxChevy;
         private System.Windows.Forms.GroupBox groupBoxRoute;
-        private System.Windows.Forms.CheckBox checkBoxCity;
-        private System.Windows.Forms.CheckBox checkBoxFreeway;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lbl;
@@ -253,6 +250,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTotalCost;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioBtnBuick;
+        private System.Windows.Forms.RadioButton radioBtnCity;
+        private System.Windows.Forms.RadioButton radioButton4;
     }
 }
 

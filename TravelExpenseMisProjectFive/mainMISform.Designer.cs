@@ -1,6 +1,6 @@
 ﻿namespace TravelExpenseMisProjectFive
 {
-    partial class Form1
+    partial class mainMISform
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.radioBtnChevy = new System.Windows.Forms.RadioButton();
             this.radioBtnBuick = new System.Windows.Forms.RadioButton();
             this.groupBoxRoute = new System.Windows.Forms.GroupBox();
+            this.radioBtnFreeway = new System.Windows.Forms.RadioButton();
             this.radioBtnCity = new System.Windows.Forms.RadioButton();
             this.btnCalc = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalCost = new System.Windows.Forms.Label();
-            this.radioBtnFreeway = new System.Windows.Forms.RadioButton();
             this.groupBoxAuto.SuspendLayout();
             this.groupBoxRoute.SuspendLayout();
             this.SuspendLayout();
@@ -68,9 +68,9 @@
             this.radioBtnChevy.Name = "radioBtnChevy";
             this.radioBtnChevy.Size = new System.Drawing.Size(65, 21);
             this.radioBtnChevy.TabIndex = 14;
-            this.radioBtnChevy.TabStop = true;
             this.radioBtnChevy.Text = "Chevy";
             this.radioBtnChevy.UseVisualStyleBackColor = true;
+            this.radioBtnChevy.CheckedChanged += new System.EventHandler(this.radioBtnChevy_CheckedChanged);
             // 
             // radioBtnBuick
             // 
@@ -83,6 +83,7 @@
             this.radioBtnBuick.TabStop = true;
             this.radioBtnBuick.Text = "Buick";
             this.radioBtnBuick.UseVisualStyleBackColor = true;
+            this.radioBtnBuick.CheckedChanged += new System.EventHandler(this.radioBtnBuick_CheckedChanged);
             // 
             // groupBoxRoute
             // 
@@ -96,6 +97,17 @@
             this.groupBoxRoute.TabIndex = 2;
             this.groupBoxRoute.TabStop = false;
             this.groupBoxRoute.Text = "ROUTE";
+            // 
+            // radioBtnFreeway
+            // 
+            this.radioBtnFreeway.AutoSize = true;
+            this.radioBtnFreeway.Location = new System.Drawing.Point(21, 39);
+            this.radioBtnFreeway.Name = "radioBtnFreeway";
+            this.radioBtnFreeway.Size = new System.Drawing.Size(79, 21);
+            this.radioBtnFreeway.TabIndex = 16;
+            this.radioBtnFreeway.Text = "Freeway";
+            this.radioBtnFreeway.UseVisualStyleBackColor = true;
+            this.radioBtnFreeway.CheckedChanged += new System.EventHandler(this.radioBtnFreeway_CheckedChanged);
             // 
             // radioBtnCity
             // 
@@ -118,6 +130,7 @@
             this.btnCalc.TabIndex = 3;
             this.btnCalc.Text = "Calc";
             this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
             // btnQuit
             // 
@@ -171,6 +184,8 @@
             this.textBoxGasPrice.Name = "textBoxGasPrice";
             this.textBoxGasPrice.Size = new System.Drawing.Size(61, 20);
             this.textBoxGasPrice.TabIndex = 9;
+            this.textBoxGasPrice.Text = "1.70";
+            this.textBoxGasPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -199,18 +214,7 @@
             this.lblTotalCost.TabIndex = 12;
             this.lblTotalCost.Text = "Total Cost";
             // 
-            // radioBtnFreeway
-            // 
-            this.radioBtnFreeway.AutoSize = true;
-            this.radioBtnFreeway.Location = new System.Drawing.Point(21, 39);
-            this.radioBtnFreeway.Name = "radioBtnFreeway";
-            this.radioBtnFreeway.Size = new System.Drawing.Size(79, 21);
-            this.radioBtnFreeway.TabIndex = 16;
-            this.radioBtnFreeway.Text = "Freeway";
-            this.radioBtnFreeway.UseVisualStyleBackColor = true;
-            this.radioBtnFreeway.CheckedChanged += new System.EventHandler(this.radioBtnFreeway_CheckedChanged);
-            // 
-            // Form1
+            // mainMISform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +232,7 @@
             this.Controls.Add(this.btnCalc);
             this.Controls.Add(this.groupBoxRoute);
             this.Controls.Add(this.groupBoxAuto);
-            this.Name = "Form1";
+            this.Name = "mainMISform";
             this.Text = "Form1";
             this.groupBoxAuto.ResumeLayout(false);
             this.groupBoxAuto.PerformLayout();

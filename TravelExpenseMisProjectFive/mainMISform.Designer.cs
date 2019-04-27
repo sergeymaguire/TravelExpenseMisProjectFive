@@ -186,6 +186,7 @@
             this.textBoxGasPrice.TabIndex = 9;
             this.textBoxGasPrice.Text = "1.70";
             this.textBoxGasPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxGasPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxGasPrice_KeyPress);
             // 
             // label1
             // 

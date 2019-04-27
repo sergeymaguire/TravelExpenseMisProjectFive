@@ -81,7 +81,7 @@ namespace TravelExpenseMisProjectFive
              decimal gasPrices = Decimal.Parse(gasPrice.ToString());
              var totalCost = totalMilesDriven / totalMpg * gasPrices;
 
-             return totalCost.ToString();
+             return totalCost.ToString("C2");
         }
         private void radioBtnBuick_CheckedChanged(object sender, EventArgs e)
         {
